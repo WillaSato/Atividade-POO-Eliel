@@ -27,4 +27,22 @@ public class MoviesController {
         MoviesModel response = moviesService.criarFilme(moviesModel);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<MoviesModel> atualizarFilme(@PathVariable Long id, @RequestBody MoviesModel moviesModel){
+        MoviesModel response = moviesService.atualizarFilme(id, moviesModel);
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deletarFilme(@PathVariable Long id){
+        moviesService.deletarFilme(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<MoviesModel> buscarId(@PathVariable Long id){
+        MoviesModel response =moviesService.buscarPorId(id);
+        return ResponseEntity.ok().body(response);
+    }
 }
