@@ -14,8 +14,9 @@ public class MoviesModel {
 
     private Long id;
     private String nome;
-    private String autor;
-    private Date dt_lancamento;
+    private String genero;
+    private String diretor;
+    private String estudio;
 
     public Long getId() {
         return id;
@@ -33,19 +34,27 @@ public class MoviesModel {
         this.nome = nome;
     }
 
-    public String getAutor() {
-        return autor;
+    public String getGenero() {
+        return genero;
     }
 
-    public void setAutor(String autor) {
-        this.autor = autor;
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
-    public Date getDt_lancamento() {
-        return dt_lancamento;
+    public String getDiretor() {
+        return diretor;
     }
 
-    public void setDt_lancamento(Date dt_lancamento) {
-        this.dt_lancamento = dt_lancamento;
+    public void setDiretor(String diretor) {
+        this.diretor = diretor;
+    }
+
+    public String getEstudio() {
+        return estudio;
+    }
+
+    public void setEstudio(String estudio) {
+        this.estudio = estudio;
     }
 }

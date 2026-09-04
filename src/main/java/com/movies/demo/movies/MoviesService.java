@@ -29,10 +29,10 @@ public class MoviesService {
 
     public MoviesModel atualizarFilme(Long id, MoviesModel moviesNew){
         MoviesModel moviesModel = moviesRepository.findById(id).get();
-        moviesModel.setAutor(moviesNew.getAutor());
-        moviesModel.setId(moviesNew.getId());
+        moviesModel.setGenero(moviesNew.getGenero());
         moviesModel.setNome(moviesNew.getNome());
-        moviesModel.setDt_lancamento(moviesNew.getDt_lancamento());
+        moviesModel.setDiretor(moviesNew.getDiretor());
+        moviesModel.setEstudio(moviesNew.getEstudio());
 
         return moviesRepository.save(moviesModel);
     }
